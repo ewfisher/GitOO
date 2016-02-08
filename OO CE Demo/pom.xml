@@ -4,5 +4,17 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>DEFAULT</groupId>
   <artifactId>OO CE Demo</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>DEFAULT</groupId>
+      <artifactId>Base</artifactId>
+      <version>[1.6.2]</version>
+    </dependency>
+    <dependency>
+      <groupId>DEFAULT</groupId>
+      <artifactId>Remediation</artifactId>
+      <version>[1.2.0]</version>
+    </dependency>
+  </dependencies>
 </project>

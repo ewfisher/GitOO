@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow id="590a437b-27f6-4ed1-8bc5-54a1072fca13">
-  <descriptionCdata><![CDATA[590a437b-27f6-4ed1-8bc5-54a1072fca13.596530ae-a0eb-4086-95ba-355baf23263c.prompt=efisher@mypoc.org
-590a437b-27f6-4ed1-8bc5-54a1072fca13.64c688ab-07a9-4166-bee4-eb4a6d298cb7.prompt=enable TLS\:
-590a437b-27f6-4ed1-8bc5-54a1072fca13.8e1e0bcf-326c-443e-a4e0-2aa99959cde3.prompt=efisher@mypoc.org
-590a437b-27f6-4ed1-8bc5-54a1072fca13.91ef70a7-45d7-4865-a01e-e443d0082d41.prompt=enable TLS\:
-590a437b-27f6-4ed1-8bc5-54a1072fca13.bce14694-ee56-4111-8e34-74a1e7d16049.description=<pre>This operation is used to send a smtp email.\n \nInputs\:\n    hostname - The hostname or ip address of the smtp server.\n    port - The port smtp service is listening.\n    from - From email address.\n    to - A delimiter separated list of email address(es) or recipients.\n    cc - A delimiter separated list of email address(es) or recipients, to be placed in the CC.\n    bcc - A delimiter separated list of email address(es) or recipients, to be placed in the BCC.\n    subject - The email subject. If a subject spans on multiple lines, it is formatted to a single one.\n    body - The body of the email.\n    htmlEmail - The value should be true if the email is in rich text/html format. The value should be false if the email is in plain text format.\nValid values\: true, false. \nDefault value\: true. \n    readReceipt - The value should be true if read receipt is required, else false. \nValid values\: true, false. \nDefault value\: false. \n    attachments - A delimiter separated list of files to attach (must be full path).\n    headers - This input contains extra headers you want to be added in the mail. The input has a 'Map' format. Header names are separated from header values through a column delimiter and headers will be separated between them by a row delimiter.\nExample\:\n    Sensitivity\:Company-Confidential\n    message-type\:Multiple Part\n    Sensitivity\:Personal\nIn the above example, the columnDelimiter is "\:" and the rowDelimiter is the new line. You can define multiple values for the same header like in the example above. The delimiters can have multiple characters, but be careful that the rowDelimiter is not a substring of the columnDelimiter.\n    rowDelimiter - The delimiter that separates headers in the 'headers' input.\nDefault value\: "\:"\nExamples\: '|', '\='\n    columnDelimiter - The delimiter that separates the header name from header value on the same row.\nDefault value\: "\\n"\t\nExamples\: ';', '\#'\n    username - If SMTP authentication is needed, the username to send.\n    password - If SMTP authentication is needed, the password to use.\n    characterSet - The character set encoding for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: UTF-8, UTF-16, UTF-32, EUC-JP, ISO-2022-JP, Shift_JIS, Windows-31J.\nDefault value\: UTF-8.\n    contentTransferEncoding - The content transfer encoding scheme (such as 7bit, 8bit, base64, quoted-printable etc) for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: quoted-printable, base64, 7bit, 8bit, binary, x-token.\nDefault value\: quoted-printable (or Q Encoding).\n    delimiter - A delimiter to separate the email recipients and the attachments.\nDefault value\: ','\n    encryptionKeystore - The path to the pks12 formatted keystore used to encrypt the mail.\n    encryptionKeyAlias - The alias of a RSA key pair from the encryptionKeystore. The public key from the pair will be used to encrypt the mail. The key pair must not have password. The recommended key size is 2048 bit or higher.\n    encryptionKeystorePassword - The password for the encryptionKeystore.\n    encryptionAlgorithm - The encryption algorithm applied on the key from the keystore in order to encypt email parts. \nDefault value\: AES256_CBC.\nValid values\: DES_EDE3_CBC, RC2_CBC, IDEA_CBC, CAST5_CBC, AES128_CBC, AES192_CBC, AES256_CBC, CAMELLIA128_CBC, CAMELLIA192_CBC, CAMELLIA256_CBC, SEED_CBC, DES_EDE3_WRAP, AES128_WRAP, AES256_WRAP, CAMELLIA128_WRAP, CAMELLIA192_WRAP, CAMELLIA256_WRAP, SEED_WRAP.\n    enableTLS - Enables starttls. If the server supports TLS or SSL, the communications will be secured by TLS or SSL. If it doesn't support TLS or SSL the communication will be unsecure.\nValid values\: true, false. \nDefault value\: false.\n    timeout - The timeout in seconds for sending the mail message.\n\nResponses\:\n    success - Successfully sent the email.\n    failure - Failed to send the email.\n\nNote\:\n1. For special characters (East Asian, right-to-left languages, etc.) you must install the support files on your local machine.\n2. For doing this on Windows go to Control Panel -> Regional and Language Options -> Language and check the options at Supplemental language support.\n3. You can use KeyStore Explorer to obtain RSA Keystore with keyPairs for encryption/decryption.\n    3.1 If you get "llegal key size exception" you don't have JCE Unlimited Strength installed.\n</pre>
-590a437b-27f6-4ed1-8bc5-54a1072fca13.c6df2516-41ba-4a9d-85a8-0d8969583d16.prompt=Character set\:
-590a437b-27f6-4ed1-8bc5-54a1072fca13.d417a7f8-b4b8-4751-afbb-8a57f7a7a72c.prompt=Content transfer encoding\:
-590a437b-27f6-4ed1-8bc5-54a1072fca13.d7964e0a-97f4-4c6b-be79-7e783e7d3592.prompt=Character set\:
+  <descriptionCdata><![CDATA[590a437b-27f6-4ed1-8bc5-54a1072fca13.bce14694-ee56-4111-8e34-74a1e7d16049.description=<pre>This operation is used to send a smtp email.\n \nInputs\:\n    hostname - The hostname or ip address of the smtp server.\n    port - The port smtp service is listening.\n    from - From email address.\n    to - A delimiter separated list of email address(es) or recipients.\n    cc - A delimiter separated list of email address(es) or recipients, to be placed in the CC.\n    bcc - A delimiter separated list of email address(es) or recipients, to be placed in the BCC.\n    subject - The email subject. If a subject spans on multiple lines, it is formatted to a single one.\n    body - The body of the email.\n    htmlEmail - The value should be true if the email is in rich text/html format. The value should be false if the email is in plain text format.\nValid values\: true, false. \nDefault value\: true. \n    readReceipt - The value should be true if read receipt is required, else false. \nValid values\: true, false. \nDefault value\: false. \n    attachments - A delimiter separated list of files to attach (must be full path).\n    headers - This input contains extra headers you want to be added in the mail. The input has a 'Map' format. Header names are separated from header values through a column delimiter and headers will be separated between them by a row delimiter.\nExample\:\n    Sensitivity\:Company-Confidential\n    message-type\:Multiple Part\n    Sensitivity\:Personal\nIn the above example, the columnDelimiter is "\:" and the rowDelimiter is the new line. You can define multiple values for the same header like in the example above. The delimiters can have multiple characters, but be careful that the rowDelimiter is not a substring of the columnDelimiter.\n    rowDelimiter - The delimiter that separates headers in the 'headers' input.\nDefault value\: "\:"\nExamples\: '|', '\='\n    columnDelimiter - The delimiter that separates the header name from header value on the same row.\nDefault value\: "\\n"\t\nExamples\: ';', '\#'\n    username - If SMTP authentication is needed, the username to send.\n    password - If SMTP authentication is needed, the password to use.\n    characterSet - The character set encoding for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: UTF-8, UTF-16, UTF-32, EUC-JP, ISO-2022-JP, Shift_JIS, Windows-31J.\nDefault value\: UTF-8.\n    contentTransferEncoding - The content transfer encoding scheme (such as 7bit, 8bit, base64, quoted-printable etc) for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: quoted-printable, base64, 7bit, 8bit, binary, x-token.\nDefault value\: quoted-printable (or Q Encoding).\n    delimiter - A delimiter to separate the email recipients and the attachments.\nDefault value\: ','\n    encryptionKeystore - The path to the pks12 formatted keystore used to encrypt the mail.\n    encryptionKeyAlias - The alias of a RSA key pair from the encryptionKeystore. The public key from the pair will be used to encrypt the mail. The key pair must not have password. The recommended key size is 2048 bit or higher.\n    encryptionKeystorePassword - The password for the encryptionKeystore.\n    encryptionAlgorithm - The encryption algorithm applied on the key from the keystore in order to encypt email parts. \nDefault value\: AES256_CBC.\nValid values\: DES_EDE3_CBC, RC2_CBC, IDEA_CBC, CAST5_CBC, AES128_CBC, AES192_CBC, AES256_CBC, CAMELLIA128_CBC, CAMELLIA192_CBC, CAMELLIA256_CBC, SEED_CBC, DES_EDE3_WRAP, AES128_WRAP, AES256_WRAP, CAMELLIA128_WRAP, CAMELLIA192_WRAP, CAMELLIA256_WRAP, SEED_WRAP.\n    enableTLS - Enables starttls. If the server supports TLS or SSL, the communications will be secured by TLS or SSL. If it doesn't support TLS or SSL the communication will be unsecure.\nValid values\: true, false. \nDefault value\: false.\n    timeout - The timeout in seconds for sending the mail message.\n\nResponses\:\n    success - Successfully sent the email.\n    failure - Failed to send the email.\n\nNote\:\n1. For special characters (East Asian, right-to-left languages, etc.) you must install the support files on your local machine.\n2. For doing this on Windows go to Control Panel -> Regional and Language Options -> Language and check the options at Supplemental language support.\n3. You can use KeyStore Explorer to obtain RSA Keystore with keyPairs for encryption/decryption.\n    3.1 If you get "llegal key size exception" you don't have JCE Unlimited Strength installed.\n</pre>
 590a437b-27f6-4ed1-8bc5-54a1072fca13.df3269d9-611b-411d-8f3d-e835accd3951.description=<pre>This operation is used to send a smtp email.\n \nInputs\:\n    hostname - The hostname or ip address of the smtp server.\n    port - The port smtp service is listening.\n    from - From email address.\n    to - A delimiter separated list of email address(es) or recipients.\n    cc - A delimiter separated list of email address(es) or recipients, to be placed in the CC.\n    bcc - A delimiter separated list of email address(es) or recipients, to be placed in the BCC.\n    subject - The email subject. If a subject spans on multiple lines, it is formatted to a single one.\n    body - The body of the email.\n    htmlEmail - The value should be true if the email is in rich text/html format. The value should be false if the email is in plain text format.\nValid values\: true, false. \nDefault value\: true. \n    readReceipt - The value should be true if read receipt is required, else false. \nValid values\: true, false. \nDefault value\: false. \n    attachments - A delimiter separated list of files to attach (must be full path).\n    headers - This input contains extra headers you want to be added in the mail. The input has a 'Map' format. Header names are separated from header values through a column delimiter and headers will be separated between them by a row delimiter.\nExample\:\n    Sensitivity\:Company-Confidential\n    message-type\:Multiple Part\n    Sensitivity\:Personal\nIn the above example, the columnDelimiter is "\:" and the rowDelimiter is the new line. You can define multiple values for the same header like in the example above. The delimiters can have multiple characters, but be careful that the rowDelimiter is not a substring of the columnDelimiter.\n    rowDelimiter - The delimiter that separates headers in the 'headers' input.\nDefault value\: "\:"\nExamples\: '|', '\='\n    columnDelimiter - The delimiter that separates the header name from header value on the same row.\nDefault value\: "\\n"\t\nExamples\: ';', '\#'\n    username - If SMTP authentication is needed, the username to send.\n    password - If SMTP authentication is needed, the password to use.\n    characterSet - The character set encoding for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: UTF-8, UTF-16, UTF-32, EUC-JP, ISO-2022-JP, Shift_JIS, Windows-31J.\nDefault value\: UTF-8.\n    contentTransferEncoding - The content transfer encoding scheme (such as 7bit, 8bit, base64, quoted-printable etc) for the entire email which includes subject, body, attached file name and the attached file. \nValid values\: quoted-printable, base64, 7bit, 8bit, binary, x-token.\nDefault value\: quoted-printable (or Q Encoding).\n    delimiter - A delimiter to separate the email recipients and the attachments.\nDefault value\: ','\n    encryptionKeystore - The path to the pks12 formatted keystore used to encrypt the mail.\n    encryptionKeyAlias - The alias of a RSA key pair from the encryptionKeystore. The public key from the pair will be used to encrypt the mail. The key pair must not have password. The recommended key size is 2048 bit or higher.\n    encryptionKeystorePassword - The password for the encryptionKeystore.\n    encryptionAlgorithm - The encryption algorithm applied on the key from the keystore in order to encypt email parts. \nDefault value\: AES256_CBC.\nValid values\: DES_EDE3_CBC, RC2_CBC, IDEA_CBC, CAST5_CBC, AES128_CBC, AES192_CBC, AES256_CBC, CAMELLIA128_CBC, CAMELLIA192_CBC, CAMELLIA256_CBC, SEED_CBC, DES_EDE3_WRAP, AES128_WRAP, AES256_WRAP, CAMELLIA128_WRAP, CAMELLIA192_WRAP, CAMELLIA256_WRAP, SEED_WRAP.\n    enableTLS - Enables starttls. If the server supports TLS or SSL, the communications will be secured by TLS or SSL. If it doesn't support TLS or SSL the communication will be unsecure.\nValid values\: true, false. \nDefault value\: false.\n    timeout - The timeout in seconds for sending the mail message.\n\nResponses\:\n    success - Successfully sent the email.\n    failure - Failed to send the email.\n\nNote\:\n1. For special characters (East Asian, right-to-left languages, etc.) you must install the support files on your local machine.\n2. For doing this on Windows go to Control Panel -> Regional and Language Options -> Language and check the options at Supplemental language support.\n3. You can use KeyStore Explorer to obtain RSA Keystore with keyPairs for encryption/decryption.\n    3.1 If you get "llegal key size exception" you don't have JCE Unlimited Strength installed.\n</pre>
-590a437b-27f6-4ed1-8bc5-54a1072fca13.e7a263dd-c605-4b30-91b9-bd2435b473c5.prompt=Content transfer encoding\:
 590a437b-27f6-4ed1-8bc5-54a1072fca13.f6298bfd-286a-478b-9a4d-e86f71578db1.description=<pre>\nCleanup the temporary folders from Linux. This flow uses the SSH protocol to execute a cleanup script on the target machine.\n\nInputs\:\n    host - Hostname or ip address of the target machine, where the script file will run.\nDefault value\: 127.0.0.1\n    username - Username of the target machine.\n    password - Password for the user.\n    cleanupSystemFiles - If this input is "Yes", then this flow will delete also the system temporary files on the target machine.\nDefault value\: No\nValid values\: Yes, No\n    cleanupPaths - A list of filters values to use for deleting the specified files/folders on the target machine.\nExamples\: /var/tmp/*, /home/root/abc*.txt, "/path with space/"*, "/path with space/myfile.txt"\n    delimiter - The list separator.\nDefault value\: ,\n\nResponses\:\n    success - The cleanup script was successfully launched and has completed executing on the target machine.\n    failure - There were problems in the execution of the cleanup script.\n\nResults\:\n    returnResult - This result contains the total number of bytes deleted from the local filesystems from the target machine.\n    StdOut - Standard output from the remote process.\n\nNotes\:\n1. The cleanup size can be negative if during the cleanup process there are created files bigger than the deleted files.\n2. The cleanup size is measured in the units used in Windows. Ex\: bytes, KB \= 1024 bytes, MB \= 1024 KB, GB \= 1024 MB etc.\n3. The cleanup size is computed only for the local file systems.\n\nOptional inputs\:\n    port - The port number for running the command.\nDefault value\: 22\n    workingDirectory - A temporary folder where the script will be executed.\nDefault value\: /\nExamples\: /tmp, /home, /var/tmp\n    timeout - Time in milliseconds to wait for the command to complete.\nDefault value\: 90000\n    characterSet - The characterSet name for input stream encoding from the target machine.\nDefault value\: UTF-8\nExamples\: SJIS, EUC-JP, UTF-8\n</pre>
 ]]></descriptionCdata>
   <annotation></annotation>
@@ -98,6 +90,7 @@
           <isPersisted>true</isPersisted>
           <inputSymbol>username</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>root</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="71f33eaf-9909-43ea-95da-bdf64b0a2ce1">
@@ -110,6 +103,7 @@
           <isPersisted>true</isPersisted>
           <inputSymbol>password</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>{OBFUSCATED}ozqtUq94FkzkOrYN0EeCIA==</value>
           <record>false</record>
         </staticBinding>
         <userInputBinding id="70f03f4f-7613-4ca8-91cc-53c7fe1fd742">
@@ -159,35 +153,6 @@
         </staticBinding>
       </bindings>
       <transitions>
-        <transition id="37704df3-90c1-4e92-b969-a436ac2b8cfa">
-          <annotation></annotation>
-          <name>success</name>
-          <command>NEXT</command>
-          <linkMode>false</linkMode>
-          <responseSymbol>success</responseSymbol>
-          <shouldHandoff>false</shouldHandoff>
-          <transitionValue>0.0</transitionValue>
-          <destination>
-            <refId>bce14694-ee56-4111-8e34-74a1e7d16049</refId>
-          </destination>
-          <source>
-            <refId>f6298bfd-286a-478b-9a4d-e86f71578db1</refId>
-          </source>
-          <positions>
-            <point>
-              <x>223.0</x>
-              <y>178.0</y>
-            </point>
-            <point>
-              <x>448.0</x>
-              <y>170.0</y>
-            </point>
-          </positions>
-          <labelPosition>
-            <x>333.0</x>
-            <y>0.0</y>
-          </labelPosition>
-        </transition>
         <transition id="e730c67d-b641-4d8c-ab1d-85e411cdf882">
           <annotation></annotation>
           <name>failure</name>
@@ -217,12 +182,98 @@
             <y>0.0</y>
           </labelPosition>
         </transition>
+        <transition id="8eba8b96-5bc4-4992-ac71-9f00664eebf3">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>bce14694-ee56-4111-8e34-74a1e7d16049</refId>
+          </destination>
+          <source>
+            <refId>f6298bfd-286a-478b-9a4d-e86f71578db1</refId>
+          </source>
+          <positions>
+            <point>
+              <x>223.0</x>
+              <y>178.0</y>
+            </point>
+            <point>
+              <x>448.0</x>
+              <y>178.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
       </transitions>
       <properties/>
       <opRef>
         <refId>adb39311-ed95-4238-90d0-6e8adeb296e7</refId>
       </opRef>
-      <assignments/>
+      <assignments>
+        <flowVariableAssignment id="6f17854e-2285-438f-ae6f-95a3d4b49bef">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
+          <contextKey>ProcessReturnCode</contextKey>
+          <expression id="4e8d9677-9f13-4049-94b4-f79ea6769c0d">
+            <annotation></annotation>
+            <name>Result Field: FailureMessage</name>
+            <fieldName>FailureMessage</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+        <flowVariableAssignment id="db52876a-4ab7-4196-89ba-ef982adb1d78">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
+          <contextKey>StdOut</contextKey>
+          <expression id="bc3811c2-185b-4616-b823-5175f3e2e018">
+            <annotation></annotation>
+            <name>Result Field: StdOut</name>
+            <fieldName>StdOut</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+        <flowVariableAssignment id="0561430d-9418-48d8-8ed4-1d2e2a2a78de">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
+          <contextKey>ProcessID</contextKey>
+          <expression id="fbe24bd7-204d-4164-8d84-ed1b719c10b9">
+            <annotation></annotation>
+            <name>Result Field: Result</name>
+            <fieldName>Result</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+        <flowVariableAssignment id="4fba801f-1e76-4305-ab40-9470dceb1aa2">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
+          <contextKey>returnResult</contextKey>
+          <expression id="a553628d-3610-44b0-b7cc-08e8fc980faf">
+            <annotation></annotation>
+            <name>Result Field: returnResult</name>
+            <fieldName>returnResult</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+      </assignments>
       <throttleSize>0</throttleSize>
     </step>
     <returnStep id="dce6e8c3-22bf-4eca-9e6a-c7014841d576">
@@ -330,7 +381,7 @@
           <value>support@mypoc.org</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="8e1e0bcf-326c-443e-a4e0-2aa99959cde3">
+        <staticBinding id="ad4bf55e-4579-45ca-9846-089e671f2706">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -340,11 +391,9 @@
           <isPersisted>true</isPersisted>
           <inputSymbol>to</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>efisher@mypoc.org</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.8e1e0bcf-326c-443e-a4e0-2aa99959cde3.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="31728923-073b-4db8-bccb-fba42f100770">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
@@ -413,7 +462,7 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>htmlEmail</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>true</value>
+          <value>false</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="08c96b9b-e170-49ca-9ad6-c7eb2ba7b3bb">
@@ -504,7 +553,7 @@ ${StdOut}</value>
           <value>{OBFUSCATED}Pzg+5fzKxPAaKZXrp2Yh+Q==</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="d7964e0a-97f4-4c6b-be79-7e783e7d3592">
+        <staticBinding id="1646edc6-29c6-4739-b5cc-099104978a1b">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -514,16 +563,10 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>characterSet</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>UTF-8</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.d7964e0a-97f4-4c6b-be79-7e783e7d3592.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>3ad6a21d-fc94-4603-aa1e-c5a63f894549</refId>
-            <refName>Character Sets</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
-        <userInputBinding id="d417a7f8-b4b8-4751-afbb-8a57f7a7a72c">
+        </staticBinding>
+        <staticBinding id="d0129d0e-4ce2-4e97-aed5-6704e47bb134">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -533,15 +576,9 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>contentTransferEncoding</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>quoted-printable</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.d417a7f8-b4b8-4751-afbb-8a57f7a7a72c.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>c6e8be46-0bbc-46b6-965d-36e523c0aacf</refId>
-            <refName>Content Transfer Encoding</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="55b666d3-3d54-40b7-9bb1-05ad2fe56a27">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
@@ -603,7 +640,7 @@ ${StdOut}</value>
           <value>AES256_CBC</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="91ef70a7-45d7-4865-a01e-e443d0082d41">
+        <staticBinding id="ec259f58-ba75-479a-bca3-06726887c37a">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -613,15 +650,9 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>enableTLS</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>false</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.91ef70a7-45d7-4865-a01e-e443d0082d41.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>96a1ed25-cdc9-4ff6-8fba-e9c044c5ca53</refId>
-            <refName>Boolean - False Default</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="148fa0d7-a334-49b9-8a98-857408512422">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
@@ -807,7 +838,7 @@ ${StdOut}</value>
           <value>support@mypoc.org</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="596530ae-a0eb-4086-95ba-355baf23263c">
+        <staticBinding id="b0299e0f-d054-491c-b141-5b99e243d30a">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -817,11 +848,9 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>to</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>efisher@mypoc.org</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.596530ae-a0eb-4086-95ba-355baf23263c.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="ed0d062c-5d12-4880-9b43-32167045d882">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
@@ -981,7 +1010,7 @@ ${StdOut}</value>
           <value>{OBFUSCATED}Pzg+5fzKxPAaKZXrp2Yh+Q==</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="c6df2516-41ba-4a9d-85a8-0d8969583d16">
+        <staticBinding id="439f7db7-2369-46f3-acba-d342f35c07c2">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -991,16 +1020,10 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>characterSet</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>UTF-8</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.c6df2516-41ba-4a9d-85a8-0d8969583d16.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>3ad6a21d-fc94-4603-aa1e-c5a63f894549</refId>
-            <refName>Character Sets</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
-        <userInputBinding id="e7a263dd-c605-4b30-91b9-bd2435b473c5">
+        </staticBinding>
+        <staticBinding id="87837377-3daf-4a59-98ec-5c29d4d01f71">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -1010,15 +1033,9 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>contentTransferEncoding</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>AES256_CC</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.e7a263dd-c605-4b30-91b9-bd2435b473c5.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>c6e8be46-0bbc-46b6-965d-36e523c0aacf</refId>
-            <refName>Content Transfer Encoding</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="9391367c-1043-4b8d-a0e8-aa8534431dad">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
@@ -1080,7 +1097,7 @@ ${StdOut}</value>
           <value>AES256_CBC</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="64c688ab-07a9-4166-bee4-eb4a6d298cb7">
+        <staticBinding id="bf47ada8-4257-4863-a8d3-9293e9e66f6a">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -1090,15 +1107,9 @@ ${StdOut}</value>
           <isPersisted>true</isPersisted>
           <inputSymbol>enableTLS</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>false</value>
           <record>false</record>
-          <prompt>590a437b-27f6-4ed1-8bc5-54a1072fca13.64c688ab-07a9-4166-bee4-eb4a6d298cb7.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <link>
-            <refId>96a1ed25-cdc9-4ff6-8fba-e9c044c5ca53</refId>
-            <refName>Boolean - False Default</refName>
-          </link>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
         <staticBinding id="8295ad64-846c-4c0f-9e74-def294088ba7">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
